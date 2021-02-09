@@ -1,0 +1,58 @@
+.firstInfo {
+  width: 100%;
+  display: flex;
+  align-self: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  padding: 0 10%;
+}
+
+.shortAboutMe img {
+  width: 100%;
+}
+.myName {
+  font-size: 100px;
+  color: white;
+  font-weight: 800;
+  word-wrap: break-word;
+  flex-wrap: wrap;
+  align-self: center;
+  transition: 0.3s;
+}
+.shortAboutMe {
+  color: white;
+  word-wrap: break-word;
+  max-width: 400px;
+  align-self: flex-end;
+  font-size: 18px;
+}
+.shortAboutMe h2 {
+  border-bottom: 2px solid #c04f1b;
+}
+
+.animatedDot {
+  position: absolute;
+  background-color: #fff;
+  border-radius: 1px;
+  width: 2px;
+  height: 2px;
+  color: white;
+}
+
+@media (max-width: 1100px) {
+  .firstInfo {
+    width: 100%;
+  }
+}
+
+@media (max-width: 750px) {
+  .myName {
+    font-size: 70px;
+  }
+}
+@media (max-width: 450px) {
+  .myName {
+    font-size: 50px;
+  }
+} ;
