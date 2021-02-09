@@ -1,10 +1,11 @@
-import "./SecondInfo.css";
 import { DataContext } from "../App";
 import { useContext } from "react";
 import SocketIoLogo from "../socketioLogo.png";
 import FaqSvg from "./svg/FAQ2.svg";
+import "./SecondInfo.css";
 const SecondInfo = () => {
   const { aboutRef, frameworksRef } = useContext(DataContext);
+
 
   return (
     <div className="secondInfo">
@@ -56,11 +57,11 @@ const SecondInfo = () => {
         />
         <img
           src="https://www.sourcefuse.com/wp-content/uploads/2018/11/express.png"
-          style={{ paddingTop: '30px' }}
+          style={{ paddingTop: "30px" }}
           alt=""
         />
         <img src="https://codefibers.pl/assets/blog/mongo.png" alt="" />
-        <img src={SocketIoLogo} alt=""  />
+        <img src={SocketIoLogo} alt="" />
       </div>
     </div>
   );
