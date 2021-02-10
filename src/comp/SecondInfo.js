@@ -13,6 +13,9 @@ const SecondInfo = () => {
 
   return (
     <div className="secondInfo">
+      <div className="secondInfoContent">
+
+
       <div className="aboutMe" ref={aboutRef}>
         <img src={FaqSvg} alt="FAQ" />
         <p className="aboutMeParagraph">FAQ</p>
@@ -57,6 +60,9 @@ const SecondInfo = () => {
         <img src={MongoDbImg} alt="" />
         <img src={SocketIoLogo} alt="" />
       </div>
+
+      </div>
+     
     </div>
   );
 };

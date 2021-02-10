@@ -76,7 +76,7 @@
     width: 100%;
   }
   .inputs {
-    justify-content: space-around;
+    justify-content: space-evenly;
   }
   .contactContainer {
     flex-direction: column;

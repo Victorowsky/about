@@ -1,11 +1,10 @@
-.firstInfo {
-  width: 100%;
+.firstInfoContent {
   display: flex;
   align-self: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
   flex-wrap: wrap;
   margin-top: 40px;
-  padding: 0 10%;
+  padding: 0 3%;
 }
 
 .shortAboutMe img {
@@ -59,18 +58,14 @@
 
 /* SECOND INFO BUGGED SO I PUT IT HERE */
 
-.secondInfo {
-  width: 100%;
+.secondInfoContent {
   display: flex;
   align-self: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
   flex-wrap: wrap;
   margin-top: 40px;
   background-color: rgb(26, 26, 26);
-  padding: 3% 10%;
-}
-.secondInfo::before {
-  background-color: rgba(255, 255, 255, 0.5);
+  padding: 3% 0;
 }
 
 .aboutMe {
