@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import "./App.css";
 import Header from "./comp/Header";
 import FirstInfo from "./comp/FirstInfo";
@@ -12,19 +12,6 @@ import Contact from "./comp/Contact/Contact";
 export const DataContext = React.createContext();
 
 function App() {
-  useEffect(() => {
-    console.log(aboutRef.current);
-    console.log(myProjectsRef.current);
-    // window.addEventListener("scroll", () => {
-    //   // if(document.offsexX)
-    //   if (window.scrollY > 600) {
-    //     ArrowUpRef.current.style.opacity = 1;
-    //   } else {
-    //     ArrowUpRef.current.style.opacity = 0;
-    //   }
-    // });
-  }, []);
-
   const aboutRef = useRef();
   const myProjectsRef = useRef();
   const frameworksRef = useRef();
@@ -32,22 +19,15 @@ function App() {
   const contactRef = useRef();
 
   return (
-    <DataContext.Provider value={{ aboutRef, myProjectsRef, frameworksRef, contactRef }}>
+    <DataContext.Provider
+      value={{ aboutRef, myProjectsRef, frameworksRef, contactRef }}
+    >
       <div className="app">
-        {/* <div className="arrowUp" ref={ArrowUpRef}>
-          <IconButton
-            color={"inherit"}
-            // style={{ color: "white", borderColor: "white" }}
-          >
-            <ArrowUpwardIcon />
-          </IconButton>
-        </div> */}
-
         <Header />
         <FirstInfo />
         <SecondInfo />
         <MyProjects />
-        <Contact/>
+        <Contact />
       </div>
     </DataContext.Provider>
   );

@@ -6,6 +6,7 @@ import "./SecondInfo.css";
 const SecondInfo = () => {
   const { aboutRef, frameworksRef } = useContext(DataContext);
 
+  // "homepage": "https://victorowsky.github.io/about/",
 
   return (
     <div className="secondInfo">
