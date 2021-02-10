@@ -1,17 +1,15 @@
 import { DataContext } from "../App";
 import { useContext } from "react";
-import SocketIoLogo from "./img/socketioLogo.png";
 import FaqSvg from "./svg/FAQ2.svg";
 import "./SecondInfo.css";
-import ReactImg from './img/react.png';
-import MongoDbImg from './img/mongo.png';
-import nodeJSImg from './img/nodejs.svg';
-import ExpressImg from './img/express.png';
+import ReactImg from "./img/tiny/react.png";
+import MongoDbImg from "./img/tiny/mongo.png";
+import nodeJSImg from "./img/nodejs.svg";
+import ExpressImg from "./img/tiny/express.png";
+import SocketIoLogo from "./img/tiny/socketioLogo.png";
 
 const SecondInfo = () => {
   const { aboutRef, frameworksRef } = useContext(DataContext);
-
-  // "homepage": "https://victorowsky.github.io/about/",
 
   return (
     <div className="secondInfo">
@@ -53,19 +51,9 @@ const SecondInfo = () => {
           <span className="javascript"> javascript</span> frameworks and
           libraries
         </h2>
-        <img
-          src={ReactImg}
-          alt=""
-        />
-        <img
-          src={nodeJSImg}
-          alt=""
-        />
-        <img
-          src={ExpressImg}
-          style={{ paddingTop: "30px" }}
-          alt=""
-        />
+        <img src={ReactImg} alt="" />
+        <img src={nodeJSImg} alt="" />
+        <img src={ExpressImg} style={{ paddingTop: "30px" }} alt="" />
         <img src={MongoDbImg} alt="" />
         <img src={SocketIoLogo} alt="" />
       </div>

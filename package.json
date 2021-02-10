@@ -1,7 +1,7 @@
 {
   "name": "app",
   "version": "0.1.0",
-  "homepage": ".",
+  "homepage": "https://victorowsky.github.io/about/",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.11.3",

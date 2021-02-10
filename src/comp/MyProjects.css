@@ -8,6 +8,7 @@
   margin: 3% 10%;
   font-size: 20px;
   transition: 1s;
+  border-radius: 5px;
 }
 
 .myProjectsContainer h2 {

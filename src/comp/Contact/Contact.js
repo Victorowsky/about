@@ -6,6 +6,7 @@ import { useContext, useState } from "react";
 import Button from "./Button";
 import Success from "./Success";
 import Error from "./Error";
+import Loading from './Loading';
 
 const Contact = () => {
   const { contactRef } = useContext(DataContext);
@@ -16,10 +17,12 @@ const Contact = () => {
   const [successMessage, setSuccessMessage] = useState("");
   const [isError, setIsError] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
+  const [isLoading, setIsLoading]= useState(false)
 
   const handleSendData = () => {
     const URL = "https://stormy-refuge-26952.herokuapp.com";
     if (textValue && email.includes("@") && name) {
+      setIsLoading(true)
       fetch(`${URL}/sendMail/${name}/${email}/${textValue}`)
         .then((res) => res.json())
         .then((res) => {
@@ -28,6 +31,7 @@ const Contact = () => {
           setEmail("");
           setName("");
           setTextValue("");
+          setIsLoading(false)
         });
     } else {
       setIsError(true);
@@ -55,7 +59,8 @@ const Contact = () => {
           />
         </div>
 
-        <TextField textValue={textValue} setTextValue={setTextValue} />
+        <TextField textValue={textValue} setTextValue={setTextValue} isLoading={isLoading} />
+
         <Button onClick={handleSendData} />
       </div>
 
