@@ -1,8 +1,13 @@
 import { DataContext } from "../App";
 import { useContext } from "react";
-import SocketIoLogo from "../socketioLogo.png";
+import SocketIoLogo from "./img/socketioLogo.png";
 import FaqSvg from "./svg/FAQ2.svg";
 import "./SecondInfo.css";
+import ReactImg from './img/react.png';
+import MongoDbImg from './img/mongo.png';
+import nodeJSImg from './img/nodejs.svg';
+import ExpressImg from './img/express.png';
+
 const SecondInfo = () => {
   const { aboutRef, frameworksRef } = useContext(DataContext);
 
@@ -49,19 +54,19 @@ const SecondInfo = () => {
           libraries
         </h2>
         <img
-          src="https://blog.lantkowiak.pl/wp-content/uploads/2017/05/react_best_practices-1453211146748.png"
+          src={ReactImg}
           alt=""
         />
         <img
-          src="https://www.l4a-soft.com/images/services/technologies/nodejs/nodejs.svg"
+          src={nodeJSImg}
           alt=""
         />
         <img
-          src="https://www.sourcefuse.com/wp-content/uploads/2018/11/express.png"
+          src={ExpressImg}
           style={{ paddingTop: "30px" }}
           alt=""
         />
-        <img src="https://codefibers.pl/assets/blog/mongo.png" alt="" />
+        <img src={MongoDbImg} alt="" />
         <img src={SocketIoLogo} alt="" />
       </div>
     </div>

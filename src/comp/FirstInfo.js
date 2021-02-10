@@ -28,7 +28,7 @@ const FirstInfo = () => {
       </div>
       <div className="shortAboutMe">
         <img src={FreeLancerSvg} alt="FreeLancerSvg" />
-        <h2>I am Junior Full Stack Javascript developer</h2>
+        <h2>I am Junior Full Stack <span className="javascript">Javascript</span>  developer</h2>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab corporis ea
         tenetur totam incidunt modi laboriosam fugiat reprehenderit quaerat
         quibusdam itaque iure dolorem, illum mollitia quidem doloribus
