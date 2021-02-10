@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "./static/css/main.6aeaf12c.chunk.css",
-    "main.js": "./static/js/main.8f4a47c1.chunk.js",
-    "main.js.map": "./static/js/main.8f4a47c1.chunk.js.map",
+    "main.js": "./static/js/main.0fcb9266.chunk.js",
+    "main.js.map": "./static/js/main.0fcb9266.chunk.js.map",
     "runtime-main.js": "./static/js/runtime-main.0c962d00.js",
     "runtime-main.js.map": "./static/js/runtime-main.0c962d00.js.map",
     "static/css/2.55d8add8.chunk.css": "./static/css/2.55d8add8.chunk.css",
@@ -15,6 +15,8 @@
     "static/media/Contact.ef2a1024.svg": "./static/media/Contact.ef2a1024.svg",
     "static/media/FAQ2.170f7502.svg": "./static/media/FAQ2.170f7502.svg",
     "static/media/FreeLancer.927e54ef.svg": "./static/media/FreeLancer.927e54ef.svg",
+    "static/media/mongo.916295b9.png": "./static/media/mongo.916295b9.png",
+    "static/media/nodejs.e5557285.svg": "./static/media/nodejs.e5557285.svg",
     "static/media/socketioLogo.3f359b1d.png": "./static/media/socketioLogo.3f359b1d.png"
   },
   "entrypoints": [
@@ -22,6 +24,6 @@
     "static/css/2.55d8add8.chunk.css",
     "static/js/2.8bba5444.chunk.js",
     "static/css/main.6aeaf12c.chunk.css",
-    "static/js/main.8f4a47c1.chunk.js"
+    "static/js/main.0fcb9266.chunk.js"
   ]
 }
