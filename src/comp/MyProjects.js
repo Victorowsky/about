@@ -2,13 +2,11 @@ import React from "react";
 import "./MyProjects.css";
 import { DataContext } from "../App";
 import { useContext } from "react";
-import Carousel from "./Carousel";
 const MyProjects = () => {
   const { myProjectsRef } = useContext(DataContext);
 
   return (
     <div className="myProjectsContainer" ref={myProjectsRef}>
-      {/* <div><Carousel /></div> */}
       <h2>Some of my projects</h2>
       <div className="myProjects">
         <div className="project">

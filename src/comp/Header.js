@@ -6,6 +6,8 @@ const Header = () => {
     DataContext
   );
 
+
+  // SCROLL TO ELEMENT FUNCION
   const scrollPage = (ref) => {
     const pageY = ref.current.getBoundingClientRect().top - 20;
     window.scrollTo({
@@ -20,12 +22,12 @@ const Header = () => {
     setTimeout(() => {
       ref.current.style.boxShadow = "";
       ref.current.style.backgroundColor = "";
-    }, pageY * 0.4 + 500);
+    }, pageY * 0.2 + 500);
   };
 
   return (
-    <div className="header">
-      <div className="nav">
+    <header className="header">
+      <nav className="nav">
         <div className="navOption">Home</div>
         <div className="navOption" onClick={() => scrollPage(aboutRef)}>
           About
@@ -39,8 +41,8 @@ const Header = () => {
         <div className="navOption" onClick={() => scrollPage(contactRef)}>
           Contact
         </div>
-      </div>
-    </div>
+      </nav>
+    </header>
   );
 };
 
