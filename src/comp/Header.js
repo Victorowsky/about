@@ -1,6 +1,6 @@
 import "./Header.css";
 import { DataContext } from "../App";
-import { useContext, useRef, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 const Header = () => {
   const { aboutRef, myProjectsRef, frameworksRef, contactRef,homeRef } = useContext(
     DataContext
@@ -12,51 +12,29 @@ const Header = () => {
   const headerRef = useRef()
 
   const handleHeaderFixed = () =>{
-    // const headerHeight = headerRef.current.clientHeight;
     const currentPageY = window.pageYOffset;
-    if(currentPageY > 100){
+    if(currentPageY > 0){
       if(!isFixed){
+      console.log(true);
         setIsFixed(true)
       }
     }else{
       if(isFixed){
+      console.log(false);
         setIsFixed(false)
       }
     }
-  //  if(headerRef.current){   
-  //     // TURN OFF FOR MOBLE DEVICES
-  //     if(window.innerWidth > 600){
-      
-  //         const headerHeight = headerRef.current.clientHeight;
-  //         const currentPageY = window.pageYOffset;
-  //         // console.log(currentPageY);
-  //         if(currentPageY > headerHeight + 100){
-  //           headerRef.current.style.position = 'fixed'
-  //           headerRef.current.style.backgroundColor = 'black'
-  //           headerRef.current.style.padding = '15px 20%'
-  //           headerRef.current.style.top = '0px'
-  //           headerRef.current.style.left = '0px'
-  //           headerRef.current.style.marginTop = '0px'
-  //           headerRef.current.style.width = '100%'
-  //         }else{
-  //           headerRef.current.style.position = ''
-  //           headerRef.current.style.backgroundColor = ''
-  //           headerRef.current.style.padding = '0 5%'
-  //           headerRef.current.style.marginTop = '30px'
-  //           headerRef.current.style.width = '1000px'
-  //         }
-      
-  //     }else{
-  //       headerRef.current.style.position = ''
-  //       headerRef.current.style.backgroundColor = ''
-  //       headerRef.current.style.padding = '0 5%'
-  //       headerRef.current.style.marginTop = '30px'
-  //       headerRef.current.style.width = '1000px'
-  //     }  
-  //   }
   }
+  useEffect(()=>{
+      document.addEventListener('scroll', handleHeaderFixed)
+   return () =>{
+  document.removeEventListener('scroll', handleHeaderFixed)
+   }
+  },[isFixed])
 
-  document.addEventListener('scroll', handleHeaderFixed)
+
+
+
 
   // SCROLL TO ELEMENT FUNCION
   const scrollPage = (ref) => {
