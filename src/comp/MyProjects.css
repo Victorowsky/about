@@ -4,7 +4,6 @@
   flex-wrap: wrap;
   flex-direction: column;
   margin-top: 40px;
-
   font-size: 20px;
   transition: 1s;
   border-radius: 5px;
@@ -42,12 +41,19 @@
   justify-content: space-around;
   flex-wrap: wrap;
 }
+.myProjectRef {
+  width: fit-content;
+  align-self: center;
+}
 
 @media (max-width: 500px) {
   .myProjectsContainer {
     width: 100%;
   }
   .myProjects {
+    width: 100%;
+  }
+  .myProjectRef {
     width: 100%;
   }
 }
