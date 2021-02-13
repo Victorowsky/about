@@ -83,7 +83,7 @@ const Header = () => {
 
   return (
     <>
-    {/* {isFixed ? 
+    {isFixed ? 
     
     <header className="headerFixed" >
     <nav className="navFixed">
@@ -105,7 +105,7 @@ const Header = () => {
   </header>
     
     
-    :  */}
+    : 
     
     
         <header className="header" >
@@ -126,7 +126,7 @@ const Header = () => {
         </div>
       </nav>
     </header>
-    {/* } */}
+     }
 
     </>
   );
