@@ -32,7 +32,13 @@ const Header = () => {
           headerRef.current.style.width = '1000px'
         }
       }
-    }  
+    }else{
+      headerRef.current.style.position = ''
+      headerRef.current.style.backgroundColor = ''
+      headerRef.current.style.padding = '0 5%'
+      headerRef.current.style.marginTop = '30px'
+      headerRef.current.style.width = '1000px'
+    } 
   }
 
   document.addEventListener('scroll', handleHeaderFixed)
