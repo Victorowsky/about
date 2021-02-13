@@ -21,8 +21,12 @@ const Contact = () => {
 
   const handleSendData = () => {
     const URL = "https://stormy-refuge-26952.herokuapp.com";
-    if (textValue && email.includes("@") && name) {
-      setIsLoading(true)
+    if (textValue && email && name) {
+      
+
+      // EMAIL MUST INCLUDES @ 
+      if(email.includes("@")){
+        setIsLoading(true)
       fetch(`${URL}/sendMail/${name}/${email}/${textValue}`)
         .then((res) => res.json())
         .then((res) => {
@@ -33,6 +37,12 @@ const Contact = () => {
           setTextValue("");
           setIsLoading(false)
         });
+      }else{
+        setIsError(true)
+        setErrorMessage('Check your email again')
+      }
+      //////////////////
+      
     } else {
       setIsError(true);
       setErrorMessage("Check your details again");

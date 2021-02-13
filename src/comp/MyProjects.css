@@ -1,11 +1,10 @@
 .myProjectsContainer {
   display: flex;
-  align-self: center;
-  justify-content: space-around;
+  flex: 1;
   flex-wrap: wrap;
   flex-direction: column;
   margin-top: 40px;
-  margin: 3% 10%;
+
   font-size: 20px;
   transition: 1s;
   border-radius: 5px;
@@ -38,8 +37,8 @@
   text-align: center;
 }
 .myProjects {
+  align-self: center;
   display: flex;
-  width: 100%;
   justify-content: space-around;
   flex-wrap: wrap;
 }
