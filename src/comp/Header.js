@@ -12,18 +12,20 @@ const Header = () => {
   const headerRef = useRef()
 
   const handleHeaderFixed = () =>{
+    // TURNED OFF FOR MOBILE
+    if(window.innerWidth > 700){
     const currentPageY = window.pageYOffset;
-    if(currentPageY > 0){
-      if(!isFixed){
-      console.log(true);
-        setIsFixed(true)
-      }
-    }else{
-      if(isFixed){
-      console.log(false);
-        setIsFixed(false)
+      if(currentPageY > 0){
+        if(!isFixed){
+          setIsFixed(true)
+        }
+      }else{
+        if(isFixed){
+          setIsFixed(false)
+        }
       }
     }
+
   }
   useEffect(()=>{
       document.addEventListener('scroll', handleHeaderFixed)
@@ -39,7 +41,6 @@ const Header = () => {
   // SCROLL TO ELEMENT FUNCION
   const scrollPage = (ref) => {
     const pageY = ref.current.getBoundingClientRect().top;
-    console.log(`PAGE Y FOR ${ref.current} is ${pageY}`);
     const scrollValue = window.pageYOffset + pageY - 100 
     if(window.pageYOffset !== pageY){
       window.scrollTo({
