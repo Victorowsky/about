@@ -3,7 +3,31 @@
   display: flex;
   justify-content: center;
   height: fit-content;
+  transition: 0.5s;
 }
+/* .headerFixed {
+  display: flex;
+  justify-content: center;
+  height: fit-content;
+  position: fixed;
+  background-color: black;
+  padding: 10px 20%;
+  top: 0;
+  margin-top: 0;
+  left: 0;
+  width: 100%;
+  transition: 0.5s;
+} */
+
+/* .navFixed {
+  display: flex;
+  flex-wrap: wrap;
+  width: 1000px;
+  justify-content: space-around;
+  gap: 30px;
+  padding: 0 5%;
+  transition: 0.05s;
+} */
 .nav {
   margin-top: 30px;
   display: flex;
