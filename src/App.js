@@ -15,14 +15,14 @@ function App() {
   const aboutRef = useRef();
   const myProjectsRef = useRef();
   const frameworksRef = useRef();
-  const ArrowUpRef = useRef();
+  const homeRef = useRef();
   const contactRef = useRef();
 
   return (
     <DataContext.Provider
-      value={{ aboutRef, myProjectsRef, frameworksRef, contactRef }}
+      value={{ aboutRef, myProjectsRef, frameworksRef, contactRef,homeRef }}
     >
-      <div className="app">
+      <div className="app" ref={homeRef}>
         <Header />
         <FirstInfo />
         <SecondInfo />

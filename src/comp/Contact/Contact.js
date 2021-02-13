@@ -6,7 +6,8 @@ import { useContext, useState } from "react";
 import Button from "./Button";
 import Success from "./Success";
 import Error from "./Error";
-import Loading from './Loading';
+import GitHubIcon from '@material-ui/icons/GitHub';
+import FacebookIcon from '@material-ui/icons/Facebook';
 
 const Contact = () => {
   const { contactRef } = useContext(DataContext);

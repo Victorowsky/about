@@ -25,6 +25,7 @@
   width: 100%;
   transition: 0.3s;
   max-height: 390px;
+  border-radius: 5px;
 }
 .project img:hover {
   box-shadow: 0 0 10px white;
@@ -44,6 +45,7 @@
 .myProjectRef {
   width: fit-content;
   align-self: center;
+  border-radius: 5px;
 }
 
 @media (max-width: 500px) {
