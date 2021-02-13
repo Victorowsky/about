@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/about/static/css/main.3bd6a0dd.chunk.css",
-    "main.js": "/about/static/js/main.754e0604.chunk.js",
-    "main.js.map": "/about/static/js/main.754e0604.chunk.js.map",
+    "main.css": "/about/static/css/main.e6fd2bda.chunk.css",
+    "main.js": "/about/static/js/main.4b3d4d4f.chunk.js",
+    "main.js.map": "/about/static/js/main.4b3d4d4f.chunk.js.map",
     "runtime-main.js": "/about/static/js/runtime-main.4e116e53.js",
     "runtime-main.js.map": "/about/static/js/runtime-main.4e116e53.js.map",
     "static/js/2.d20c7a69.chunk.js": "/about/static/js/2.d20c7a69.chunk.js",
     "static/js/2.d20c7a69.chunk.js.map": "/about/static/js/2.d20c7a69.chunk.js.map",
     "index.html": "/about/index.html",
-    "static/css/main.3bd6a0dd.chunk.css.map": "/about/static/css/main.3bd6a0dd.chunk.css.map",
+    "static/css/main.e6fd2bda.chunk.css.map": "/about/static/css/main.e6fd2bda.chunk.css.map",
     "static/js/2.d20c7a69.chunk.js.LICENSE.txt": "/about/static/js/2.d20c7a69.chunk.js.LICENSE.txt",
     "static/media/Contact.ef2a1024.svg": "/about/static/media/Contact.ef2a1024.svg",
     "static/media/FAQ2.170f7502.svg": "/about/static/media/FAQ2.170f7502.svg",
@@ -19,7 +19,7 @@
   "entrypoints": [
     "static/js/runtime-main.4e116e53.js",
     "static/js/2.d20c7a69.chunk.js",
-    "static/css/main.3bd6a0dd.chunk.css",
-    "static/js/main.754e0604.chunk.js"
+    "static/css/main.e6fd2bda.chunk.css",
+    "static/js/main.4b3d4d4f.chunk.js"
   ]
 }
