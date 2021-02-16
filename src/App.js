@@ -4,9 +4,6 @@ import Header from "./comp/Header";
 import FirstInfo from "./comp/FirstInfo";
 import SecondInfo from "./comp/SecondInfo";
 import MyProjects from "./comp/MyProjects";
-import ArrowUpwardIcon from "@material-ui/icons/ArrowUpward";
-import IconButton from "@material-ui/core/IconButton";
-import { Icon } from "@material-ui/core";
 import Contact from "./comp/Contact/Contact";
 
 export const DataContext = React.createContext();

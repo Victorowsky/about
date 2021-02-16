@@ -16,6 +16,9 @@
   width: 500px;
   padding: 15px;
   border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
 }
 .project:nth-child(2n) {
   background-color: rgb(26, 26, 26);
