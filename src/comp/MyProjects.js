@@ -6,14 +6,14 @@ const MyProjects = () => {
   const { myProjectsRef } = useContext(DataContext);
 
   return (
-    <div className="myProjectsContainer" >
+    <div className="myProjectsContainer">
       <div className="myProjectRef" ref={myProjectsRef}>
         <h2>Some of my projects</h2>
-        <div className="myProjects" >
+        <div className="myProjects">
           <div className="project">
             <div className="img">
               <a
-                href="https://victorowsky.github.io/watch/#/"
+                href="https://boiling-bastion-80662.herokuapp.com/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -38,14 +38,14 @@ const MyProjects = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img src="https://imgur.com/eebZgAK.png" alt=""  />
+                <img src="https://imgur.com/eebZgAK.png" alt="" />
               </a>
             </div>
             <h3 className="projectName">Streaming Family</h3>
 
             <div className="description">
-              Platform where you can find people to share your account, thoughts,
-              and more.
+              Platform where you can find people to share your account,
+              thoughts, and more.
             </div>
           </div>
           <div className="project">
@@ -55,7 +55,7 @@ const MyProjects = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img src="https://imgur.com/Gs4KoBE.png" alt=""  />
+                <img src="https://imgur.com/Gs4KoBE.png" alt="" />
               </a>
             </div>
             <h3 className="projectName">PlayStation 5 Checker</h3>

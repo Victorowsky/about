@@ -5,10 +5,12 @@
   flex-wrap: wrap;
   margin-top: 40px;
   padding: 0 3%;
+  gap: 20px;
 }
 
-.shortAboutMe img {
+.shortAboutMe svg {
   width: 100%;
+  fill: white;
 }
 .myName {
   font-size: 100px;
@@ -19,12 +21,16 @@
   align-self: center;
   transition: 0.3s;
 }
+
 .shortAboutMe {
   color: white;
   word-wrap: break-word;
   max-width: 400px;
   align-self: flex-end;
   font-size: 18px;
+}
+.shortAboutMe img {
+  width: 100%;
 }
 .shortAboutMe h2 {
   border-bottom: 2px solid #c04f1b;

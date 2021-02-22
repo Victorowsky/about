@@ -6,8 +6,6 @@ import { useContext, useState } from "react";
 import Button from "./Button";
 import Success from "./Success";
 import Error from "./Error";
-import GitHubIcon from '@material-ui/icons/GitHub';
-import FacebookIcon from '@material-ui/icons/Facebook';
 
 const Contact = () => {
   const { contactRef } = useContext(DataContext);
@@ -22,9 +20,8 @@ const Contact = () => {
 
   const handleSendData = () => {
     const URL = "https://stormy-refuge-26952.herokuapp.com";
-    if (textValue && email && name) {
-      
-
+    if (textValue.length > 3 && email && name) {
+  
       // EMAIL MUST INCLUDES @ 
       if(email.includes("@")){
         setIsLoading(true)

@@ -1,5 +1,5 @@
 import { DataContext } from "../App";
-import { useContext } from "react";
+import { useContext,useEffect,useRef,useState } from "react";
 import FaqSvg from "./svg/FAQ2.svg";
 import "./SecondInfo.css";
 import ReactImg from "./img/tiny/react.png";
@@ -7,9 +7,47 @@ import MongoDbImg from "./img/tiny/mongo.png";
 import nodeJSImg from "./img/nodejs.svg";
 import ExpressImg from "./img/tiny/express.png";
 import SocketIoLogo from "./img/tiny/socketioLogo.png";
+import anime from 'animejs/lib/anime.es.js';
 
 const SecondInfo = () => {
   const { aboutRef, frameworksRef } = useContext(DataContext);
+
+  const animeNumbers = (target, endValue,time) =>{
+    anime({
+      targets: target,
+      innerHTML: [0, endValue],
+      easing: 'spring',
+      duration: time || 500,
+      round: 1 // Will round the animated value to 1 decimal
+    })
+  }
+
+  const birthRef = useRef(null)
+  let didAnimate = false;
+  const handleAnimateBirthDate = () =>{
+    if(aboutRef.current?.getBoundingClientRect()?.top - 200 < 0 && !didAnimate){
+      animeNumbers('.dayBirth', 12,3000);
+      animeNumbers('.monthBirth', 2,5000);
+      animeNumbers('.yearBirth', 2002,1000);
+      didAnimate = true
+    }
+  }
+
+
+  useEffect(()=>{
+    document.addEventListener('scroll', handleAnimateBirthDate)
+      return () =>{
+        document.removeEventListener('scroll', handleAnimateBirthDate)
+      }
+
+  },[])
+
+  // },[birthTop])
+
+
+
+
+
 
   return (
     <div className="secondInfo">
@@ -28,7 +66,12 @@ const SecondInfo = () => {
           </div>
           <div className="questionAndAnswer">
             <div className="question">How old are you?</div>
-            <div className="answer">I born in 2002, now I am 18 year old.</div>
+            <div ref={birthRef} className="answer">I born in {" "}
+             
+            <span className="dayBirth">12</span>
+            .0<span className="monthBirth">2</span>
+            .
+            <span className="yearBirth">2002</span>, now I am 19 year old.</div>
           </div>
           <div className="questionAndAnswer">
             <div className="question">
@@ -36,7 +79,7 @@ const SecondInfo = () => {
               <span className="javascript"> javascript</span>?
             </div>
             <div className="answer">
-              I started learning where I was 16, and I think it is going well.
+              I started learning where I was 18, and I think it is going well.
             </div>
           </div>
           <div className="questionAndAnswer">
