@@ -1,5 +1,5 @@
 import { DataContext } from "../App";
-import { useContext,useEffect,useRef,useState } from "react";
+import { useContext,useEffect,useRef } from "react";
 import FaqSvg from "./svg/FAQ2.svg";
 import "./SecondInfo.css";
 import ReactImg from "./img/tiny/react.png";
@@ -8,9 +8,29 @@ import nodeJSImg from "./img/nodejs.svg";
 import ExpressImg from "./img/tiny/express.png";
 import SocketIoLogo from "./img/tiny/socketioLogo.png";
 import anime from 'animejs/lib/anime.es.js';
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
 
 const SecondInfo = () => {
+  gsap.registerPlugin(ScrollTrigger)
   const { aboutRef, frameworksRef } = useContext(DataContext);
+
+  useEffect(()=>{
+    const tl = gsap.timeline({
+      scrollTrigger:{
+        trigger: aboutRef.current,
+        start: '-70% top',
+      },
+   
+    })
+
+    tl.from(aboutRef.current, {x:'-=300', duration: 1, ease: "power1.out", autoAlpha:0})
+
+    tl.from(frameworksRef.current, {x:'+=300', duration: 1, ease: "power1.out", autoAlpha:0},"-=1")
+
+  },[aboutRef, frameworksRef])
+
+
 
   const animeNumbers = (target, endValue,time) =>{
     anime({

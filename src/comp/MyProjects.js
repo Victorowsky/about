@@ -1,9 +1,29 @@
 import React from "react";
 import "./MyProjects.css";
 import { DataContext } from "../App";
-import { useContext } from "react";
+import { useContext,useEffect } from "react";
+import gsap from 'gsap';
+import ScrollTrigger from "gsap/ScrollTrigger";
+
 const MyProjects = () => {
+  gsap.registerPlugin(ScrollTrigger)
+
   const { myProjectsRef } = useContext(DataContext);
+
+  useEffect(()=>{
+    const tl = gsap.timeline({
+      scrollTrigger:{
+        trigger: myProjectsRef.current,
+        start: '-80% top',
+      },
+   
+    })
+    const arrayOfProjects = Array.from(myProjectsRef.current.children)
+    tl.from(arrayOfProjects[1].children, {y:'+=300', duration: 1, ease: "power1.out", autoAlpha:0, stagger: 0.25})
+  
+    tl.from(myProjectsRef.current.children[0],{y:'+=100', duration: 1, ease: "power1.out", autoAlpha:0,}, '-=1' )
+
+  },[myProjectsRef])
 
   return (
     <div className="myProjectsContainer">
