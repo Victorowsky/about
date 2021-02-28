@@ -1,7 +1,7 @@
 import "./Header.css";
 import { DataContext } from "../App";
-import { useContext, useEffect, useRef, useState } from "react";
-import FirstInfo from "./FirstInfo";
+import { useCallback, useContext, useEffect, useRef, useState } from "react";
+import gsap from 'gsap';
 const Header = () => {
   const {
     aboutRef,
@@ -11,13 +11,15 @@ const Header = () => {
     homeRef,
   } = useContext(DataContext);
 
+  const navRef = useRef(null)
+
   const [isFixed, setIsFixed] = useState(false);
   const headerFixedRef = useRef();
   const bodyTop = document.body.getBoundingClientRect().top
 
 
 
-  const handleHeaderFixedChangeColor = () =>{
+  const handleHeaderFixedChangeColor = useCallback(() =>{
     if(myProjectsRef.current && headerFixedRef.current && frameworksRef.current){
       const myProjectsTop = myProjectsRef.current.getBoundingClientRect().top - bodyTop 
       const headerFixedTop = headerFixedRef.current.getBoundingClientRect().top 
@@ -34,11 +36,11 @@ const Header = () => {
         headerFixedRef.current.style.backgroundColor = ""
       }
     }
-  }
+  },[aboutRef, bodyTop, frameworksRef, myProjectsRef])
 
 
 
-  const handleHeaderFixed = () => {
+  const handleHeaderFixed = useCallback(() => {
     // TURNED OFF FOR MOBILE
     if (window.innerWidth > 700) {
       const currentPageY = window.pageYOffset;
@@ -61,9 +63,10 @@ const Header = () => {
 
       }
     }
-    
+  
+  },[isFixed]);
 
-  };
+
   useEffect(() => {
     document.addEventListener("scroll", handleHeaderFixed);
     document.addEventListener("scroll", handleHeaderFixedChangeColor);
@@ -71,7 +74,7 @@ const Header = () => {
       document.removeEventListener("scroll", handleHeaderFixed);
       document.removeEventListener("scroll", handleHeaderFixedChangeColor);
     };
-  }, [isFixed]);
+  }, [isFixed, handleHeaderFixed, handleHeaderFixedChangeColor]);
 
   // SCROLL TO ELEMENT FUNCION
   const scrollPage = (ref) => {
@@ -93,11 +96,18 @@ const Header = () => {
     }, pageY * 0.2 + 500);
   };
 
+
+  useEffect(()=>{
+    gsap.set(navRef.current, {visibility: 'visible'})
+    gsap.from(navRef.current.children, {autoAlpha: 0, y:'+=50', duration:0.3, stagger: 0.25},)
+  },[])
+
+
   return (
     <>
 
         <header className={isFixed ?  "headerFixed": "header"} ref={headerFixedRef}>
-          <nav className={isFixed ? "navFixed" : 'nav'}>
+          <nav className={isFixed ? "navFixed" : 'nav'} ref={navRef}>
             <div className="navOption" onClick={() => scrollPage(homeRef)}>
               Home
             </div>

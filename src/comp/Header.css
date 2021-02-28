@@ -30,6 +30,7 @@
 	gap: 30px;
 	padding: 0 5%;
 	transition: 0.05s;
+	overflow: hidden;
 }
 .nav {
 	margin-top: 30px;
@@ -40,6 +41,7 @@
 	gap: 30px;
 	padding: 0 5%;
 	transition: 0.05s;
+	visibility: hidden;
 }
 .navOption {
 	color: #5e5e5e;

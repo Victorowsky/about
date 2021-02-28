@@ -16,7 +16,8 @@ const SecondInfo = () => {
   const { aboutRef, frameworksRef } = useContext(DataContext);
 
   useEffect(()=>{
-    const tl = gsap.timeline({
+    if(window.innerWidth > 500){
+      const tl = gsap.timeline({
       scrollTrigger:{
         trigger: aboutRef.current,
         start: '-70% top',
@@ -27,6 +28,7 @@ const SecondInfo = () => {
     tl.from(aboutRef.current, {x:'-=300', duration: 1, ease: "power1.out", autoAlpha:0})
 
     tl.from(frameworksRef.current, {x:'+=300', duration: 1, ease: "power1.out", autoAlpha:0},"-=1")
+    }
 
   },[aboutRef, frameworksRef])
 
@@ -91,7 +93,7 @@ const SecondInfo = () => {
             <span className="dayBirth">12</span>
             .0<span className="monthBirth">2</span>
             .
-            <span className="yearBirth">2002</span>, now I am 19 year old.</div>
+            <span className="yearBirth">2002</span>, now I am 19 years old.</div>
           </div>
           <div className="questionAndAnswer">
             <div className="question">

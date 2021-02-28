@@ -19,7 +19,8 @@
 	word-wrap: break-word;
 	flex-wrap: wrap;
 	align-self: center;
-	transition: 0.3s;
+	transition: 0.3s font-size;
+	max-width: 600px;
 }
 
 .shortAboutMe {
