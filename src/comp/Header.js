@@ -2,6 +2,9 @@ import "./Header.css";
 import { DataContext } from "../App";
 import { useCallback, useContext, useEffect, useRef, useState } from "react";
 import gsap from 'gsap';
+import anime from 'animejs/lib/anime.es.js';
+import { duration } from "@material-ui/core";
+
 const Header = () => {
   const {
     aboutRef,
@@ -100,7 +103,15 @@ const Header = () => {
   useEffect(()=>{
     gsap.set(navRef.current, {visibility: 'visible'})
     gsap.from(navRef.current.children, {autoAlpha: 0, y:'+=50', duration:0.3, stagger: 0.25},)
-  },[])
+    // anime.set({targets: navRef.current, visibility:'visible'})
+    // anime({
+    //   targets: navRef.current.children, 
+    //   translateY: "-=50",
+    //   duration: 300,
+    //   delay: anime.stagger(250)
+    // })
+
+  },[navRef])
 
 
   return (

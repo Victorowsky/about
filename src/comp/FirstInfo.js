@@ -3,43 +3,26 @@ import FreeLancerSvg from "./svg/FreeLancer.svg";
 import gsap from "gsap";
 // import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
 import { useEffect, useRef } from "react";
-import {ReactComponent as NameSvg} from './svg/name.svg';
 import anime from 'animejs/lib/anime.es.js';
 
 const FirstInfo = () => {
 	const infoRef = useRef(null);
 
 	useEffect(() => {
-    gsap.from(infoRef.current, { duration: 1, scale: 0, autoAlpha: 0 });
-    // anime({
-    //   targets: '#name path',
-    //   strokeDashoffset: [anime.setDashoffset, 0],
-    //   easing: 'easeInOutSine',
-    //   duration: 500,
-    //   delay: function(el, i) { return i * 100 },
-      
-    //   direction: 'forwards',
-    //   // fill:'#fff',
-    //   // loop: true
-    // });
-    // // anime({
-    // //   targets: '#name path',
-
-    // //   easing: 'easeInOutSine',
-    // //   duration: 500,
-    // //   delay: anime.stagger(250),
-    // //   stroke: 0,
-    // //   direction: 'forwards',
-    // //   fill:'#fff',
-    // //   // loop: true
-    // // });
-	}, []);
+	gsap.set(infoRef.current, {visibility: 'visible'})
+	gsap.from(infoRef.current, { duration: 1, scale: 0, autoAlpha: 0 });
+	// anime({
+	// 	targets: infoRef.current,
+	// 	duration: 1000,
+	// 	easing: 'easeOutQuad',
+	// 	scale:[0,1],
+	// })
+	}, [infoRef]);
 
 	return (
 		<div className="firstInfo">
 			<div className="firstInfoContent" ref={infoRef}>
 				<div className="myName">
-        {/* <NameSvg/> */}
           Wiktor Kędzierawski
         </div>
 				<div className="shortAboutMe">
