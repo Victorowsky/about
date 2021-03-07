@@ -1,36 +1,39 @@
 body {
-  background-color: rgb(31, 31, 31);
+	background-color: rgb(31, 31, 31);
 }
+
 .app {
-  display: flex;
-  color: white;
-  flex-direction: column;
-  border-top: 2px solid #c04f1b;
+	margin: auto;
+	display: flex;
+	color: white;
+	flex-direction: column;
+	border-top: 2px solid #c04f1b;
+	max-width: 2000px;
 }
 ::-webkit-scrollbar {
-  display: none;
+	display: none;
 }
 
 ::selection {
-  background-color: #c04f1b;
+	background-color: #c04f1b;
 }
 
 .header,
 .firstInfo,
 .secondInfo {
-  width: 100%;
+	width: 100%;
 }
 .arrowUp {
-  position: fixed;
-  left: 95%;
-  top: 3%;
-  transition: 1s;
-  opacity: 0;
-  border: 2px solid black;
-  border-radius: 50%;
-  /* transform: scale(0.75); */
-  /* padding: 5px; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+	position: fixed;
+	left: 95%;
+	top: 3%;
+	transition: 1s;
+	opacity: 0;
+	border: 2px solid black;
+	border-radius: 50%;
+	/* transform: scale(0.75); */
+	/* padding: 5px; */
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }

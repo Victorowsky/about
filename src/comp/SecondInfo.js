@@ -16,7 +16,7 @@ const SecondInfo = () => {
 	const { aboutRef, frameworksRef } = useContext(DataContext);
 
 	useEffect(() => {
-		if (window.innerWidth > 500) {
+		if (window.innerWidth > 500 && window.innerHeight < 1080) {
 			const tl = gsap.timeline({
 				scrollTrigger: {
 					trigger: aboutRef.current,

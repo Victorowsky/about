@@ -11,7 +11,8 @@ const MyProjects = () => {
   const { myProjectsRef } = useContext(DataContext);
 
   useEffect(()=>{
-    if(window.innerWidth > 500){
+    console.log(window.innerHeight);
+    if(window.innerWidth > 500 && window.innerHeight < 1080){
        const tl = gsap.timeline({
       scrollTrigger:{
         trigger: myProjectsRef.current,
@@ -24,8 +25,6 @@ const MyProjects = () => {
   
     tl.from(myProjectsRef.current.children[0],{y:'+=100', duration: 1, ease: "power1.out", autoAlpha:0,}, '-=1' )
     }
-   
-
   },[myProjectsRef])
 
   return (
