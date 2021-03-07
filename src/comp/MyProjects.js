@@ -11,7 +11,6 @@ const MyProjects = () => {
   const { myProjectsRef } = useContext(DataContext);
 
   useEffect(()=>{
-    console.log(window.innerHeight);
     if(window.innerWidth > 500 && window.innerHeight < 1080){
        const tl = gsap.timeline({
       scrollTrigger:{
