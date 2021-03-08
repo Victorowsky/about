@@ -10,13 +10,7 @@ const FirstInfo = () => {
 
 	useEffect(() => {
 	gsap.set(infoRef.current, {visibility: 'visible'})
-	gsap.from(infoRef.current, { duration: 1, scale: 0, autoAlpha: 0 });
-	// anime({
-	// 	targets: infoRef.current,
-	// 	duration: 1000,
-	// 	easing: 'easeOutQuad',
-	// 	scale:[0,1],
-	// })
+	gsap.from(infoRef.current, { duration: 1, scale:0.5, autoAlpha: 0, ease: "power1.inOut" });
 	}, [infoRef]);
 
 	return (

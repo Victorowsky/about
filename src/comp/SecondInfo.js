@@ -14,6 +14,8 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 const SecondInfo = () => {
 	gsap.registerPlugin(ScrollTrigger);
 	const { aboutRef, frameworksRef } = useContext(DataContext);
+	
+
 
 	useEffect(() => {
 		if (window.innerWidth > 500 && window.innerHeight < 1080) {
@@ -23,19 +25,33 @@ const SecondInfo = () => {
 					start: "-70% top",
 				},
 			});
+	
+		
 
-			tl.from(aboutRef.current, {
+
+			let aboutRefWithOutQuestions = Array.from(aboutRef.current.children)
+			aboutRefWithOutQuestions.pop()
+		
+			tl.from(aboutRefWithOutQuestions, {
 				x: "-=300",
 				duration: 1,
 				ease: "power1.out",
 				autoAlpha: 0,
 			});
+			tl.from(aboutRef.current.children[1].children, {
+				x: "-=300",
+				duration: 1,
+				ease: "power1.out",
+				autoAlpha: 0,
+				stagger: 0.25,
+			},"-=1");
 
 			tl.from(
-				frameworksRef.current,
-				{ x: "+=300", duration: 1, ease: "power1.out", autoAlpha: 0 },
-				"-=1"
+				frameworksRef.current.children,
+				{ x: "+=300", duration: 1, ease: "power1.out", autoAlpha: 0, stagger:0.25 },
+				"-=2"
 			);
+			console.log(tl);
 		}
 	}, [aboutRef, frameworksRef]);
 
@@ -87,8 +103,11 @@ const SecondInfo = () => {
 		<div className="secondInfo">
 			<div className="secondInfoContent">
 				<div className="aboutMe" ref={aboutRef}>
-					<img src={FaqSvg} alt="FAQ" />
-					<p className="aboutMeParagraph">FAQ</p>
+					<div>
+						<img src={FaqSvg} alt="FAQ" />
+						<p className="aboutMeParagraph">FAQ</p>
+					</div>
+					
 					<div className="aboutMeText">
 						<div className="questionAndAnswer">
 							<div className="question">Where are you from?</div>

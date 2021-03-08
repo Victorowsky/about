@@ -57,11 +57,17 @@
 @media (max-width: 750px) {
 	.myName {
 		font-size: 70px;
+		text-align: center;
 	}
 }
 @media (max-width: 450px) {
 	.myName {
 		font-size: 50px;
+	}
+}
+@media (max-width: 300px) {
+	.myName {
+		width: 100%;
 	}
 }
 
