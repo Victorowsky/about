@@ -51,7 +51,7 @@ const SecondInfo = () => {
 				{ x: "+=300", duration: 1, ease: "power1.out", autoAlpha: 0, stagger:0.25 },
 				"-=2"
 			);
-			console.log(tl);
+	
 		}
 	}, [aboutRef, frameworksRef]);
 
