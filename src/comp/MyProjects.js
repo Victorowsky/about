@@ -16,7 +16,7 @@ const MyProjects = () => {
        const tl = gsap.timeline({
       scrollTrigger:{
         trigger: myProjectsRef.current,
-        start: '-80% top',
+        start: '-85% top',
       },
    
     })
