@@ -52,6 +52,7 @@ const MyProjects = () => {
 						imgLink={"https://imgur.com/ZZlUCca.png"}
 						projectName={"Blogr"}
 						description={`Project from Frontend Mentor. Made in React within about 8 hours.`}
+						bookmark={true}
 					/>
 					<Project
 						link={"https://victorowsky.github.io/Fylo"}

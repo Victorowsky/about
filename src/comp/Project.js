@@ -1,6 +1,14 @@
-const Project = ({link, description, imgLink, projectName}) => {
+import StarIcon from '@material-ui/icons/Star';
+const Project = ({link, description, imgLink, projectName, bookmark}) => {
+
+
     return ( 
         <div className="project">
+           {bookmark &&
+            <div className="bookmark">
+              <StarIcon/>
+            </div>
+           } 
             <div className="img">
               <a
                 href={link}

@@ -1,64 +1,75 @@
 .myProjectsContainer {
-  display: flex;
-  flex: 1;
-  flex-wrap: wrap;
-  flex-direction: column;
-  margin-top: 40px;
-  font-size: 20px;
-  transition: 1s;
-  border-radius: 5px;
+	display: flex;
+	flex: 1;
+	flex-wrap: wrap;
+	flex-direction: column;
+	margin-top: 40px;
+	font-size: 20px;
+	transition: 1s;
+	border-radius: 5px;
 }
 
 .myProjectsContainer h2 {
-  text-align: center;
+	text-align: center;
 }
 .project {
-  width: 500px;
-  padding: 15px;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  /* justify-content: space-between; */
+	width: 500px;
+	padding: 15px;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	/* justify-content: space-between; */
 }
+.project .bookmark {
+	position: absolute;
+	right: 0;
+	color: #e9c46a;
+	transform: translate(-45%, 5%);
+	border-radius: 3px;
+	padding: 5.5px 8px;
+	background-color: #12121270;
+}
+
 .project:nth-child(2n) {
-  background-color: rgb(26, 26, 26);
+	background-color: rgb(26, 26, 26);
 }
 
 .project img {
-  width: 100%;
-  transition: 0.3s;
-  max-height: 390px;
-  border-radius: 5px;
+	width: 100%;
+	transition: 0.3s;
+	max-height: 390px;
+	border-radius: 5px;
 }
 .project img:hover {
-  box-shadow: 0 0 10px white;
+	box-shadow: 0 0 10px white;
 }
 .projectName {
-  text-align: center;
+	text-align: center;
 }
 .description {
-  text-align: center;
+	text-align: center;
 }
 .myProjects {
-  align-self: center;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+	align-self: center;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
 }
 .myProjectRef {
-  width: fit-content;
-  align-self: center;
-  border-radius: 5px;
+	width: fit-content;
+	align-self: center;
+	border-radius: 5px;
 }
 
 @media (max-width: 500px) {
-  .myProjectsContainer {
-    width: 100%;
-  }
-  .myProjects {
-    width: 100%;
-  }
-  .myProjectRef {
-    width: 100%;
-  }
+	.myProjectsContainer {
+		width: 100%;
+	}
+	.myProjects {
+		width: 100%;
+	}
+	.myProjectRef {
+		width: 100%;
+	}
 }
