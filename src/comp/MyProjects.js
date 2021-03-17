@@ -57,7 +57,7 @@ const MyProjects = () => {
 						link={"https://victorowsky.github.io/Fylo"}
 						imgLink={"https://imgur.com/AzMj9az.png"}
 						projectName={"Fylo"}
-						description={`Next project from Frontent Mentor. Show some CSS skils.`}
+						description={`Next project from Frontent Mentor. Show some CSS skills.`}
 					/>
 				</div>
 			</div>
