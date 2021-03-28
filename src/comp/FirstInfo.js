@@ -25,9 +25,8 @@ const FirstInfo = () => {
 				<div className="shortAboutMe">
 					<img src={FreeLancerSvg} alt="FreeLancerSvg" />
 					<h2>
-						I am Junior Frontend 
+						I am Junior Frontend developer
 						{/* <span className="javascript">Javascript</span> */}
-						developer
 					</h2>
 					I am a young and motivated person for doing amazing things in the
 					future. Coding is something that gives me happiness and satisfaction
