@@ -58,19 +58,10 @@
 	transform-origin: 0;
 	transition: 0.3s;
 }
-
 .navOption:hover::after {
 	transform: scaleX(1);
+	/* transform-origin: right; */
 }
 .navOption:hover {
 	color: #c04f1b;
 }
-/* 
-@keyframes borderAnimation {
-  from {
-    border-bottom-width: 0%;
-  }
-  to {
-    border-bottom-width: 100%;
-  }
-} */

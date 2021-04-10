@@ -44,7 +44,7 @@
 	border-radius: 5px;
 }
 .project img:hover {
-	box-shadow: 0 0 10px white;
+	box-shadow: 0 0 10px black;
 }
 .projectName {
 	text-align: center;

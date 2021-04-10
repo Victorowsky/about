@@ -1,7 +1,6 @@
 import "./FirstInfo.css";
 import FreeLancerSvg from "./svg/FreeLancer.svg";
 import gsap from "gsap";
-// import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
 import { useEffect, useRef, useState } from "react";
 import anime from "animejs/lib/anime.es.js";
 
