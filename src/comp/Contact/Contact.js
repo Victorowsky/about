@@ -28,14 +28,21 @@ const Contact = () => {
       fetch(`${URL}/sendMail/${name}/${email}/${textValue}`)
         .then((res) => res.json())
         .then((res) => {
-          setIsSuccess(true);
+          if(res.success){
+               setIsSuccess(true);
           setSuccessMessage(res.message);
           setEmail("");
           setName("");
           setTextValue("");
           setIsLoading(false)
+          }else{
+            setIsError(true)
+            setErrorMessage('Sorry there is a problem with sending your message.')
+            setIsLoading(false)
+          }
+       
         });
-      }else{
+      }else{ // IF EMAIL SEND FAILS ON SERVER
         setIsError(true)
         setErrorMessage('Check your email again')
       }

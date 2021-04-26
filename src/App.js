@@ -9,25 +9,25 @@ import Contact from "./comp/Contact/Contact";
 export const DataContext = React.createContext();
 
 function App() {
-  const aboutRef = useRef();
-  const myProjectsRef = useRef();
-  const frameworksRef = useRef();
-  const homeRef = useRef();
-  const contactRef = useRef();
+	const aboutRef = useRef();
+	const myProjectsRef = useRef();
+	const frameworksRef = useRef();
+	const homeRef = useRef();
+	const contactRef = useRef();
 
-  return (
-    <DataContext.Provider
-      value={{ aboutRef, myProjectsRef, frameworksRef, contactRef,homeRef }}
-    >
-      <div className="app" ref={homeRef}>
-        <Header />
-        <FirstInfo />
-        <SecondInfo />
-        <MyProjects />
-        <Contact />
-      </div>
-    </DataContext.Provider>
-  );
+	return (
+		<DataContext.Provider
+			value={{ aboutRef, myProjectsRef, frameworksRef, contactRef, homeRef }}
+		>
+			<div className="app" ref={homeRef}>
+				<Header />
+				<FirstInfo />
+				<SecondInfo />
+				<MyProjects />
+				<Contact />
+			</div>
+		</DataContext.Provider>
+	);
 }
 
 export default App;

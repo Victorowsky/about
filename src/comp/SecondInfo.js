@@ -22,7 +22,8 @@ const SecondInfo = () => {
 			const tl = gsap.timeline({
 				scrollTrigger: {
 					trigger: aboutRef.current,
-					start: "-70% top",
+					start: "-50% top",
+					
 				},
 			});
 	

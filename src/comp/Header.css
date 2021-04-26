@@ -60,7 +60,6 @@
 }
 .navOption:hover::after {
 	transform: scaleX(1);
-	/* transform-origin: right; */
 }
 .navOption:hover {
 	color: #c04f1b;
