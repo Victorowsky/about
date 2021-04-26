@@ -19,7 +19,7 @@ const Contact = () => {
   const [isLoading, setIsLoading]= useState(false)
 
   const handleSendData = () => {
-    const URL = "https://stormy-refuge-26952.herokuapp.com";
+    const URL = "http://portfolio-es.herokuapp.com";
     if (textValue.length > 3 && email && name) {
   
       // EMAIL MUST INCLUDES @ 
