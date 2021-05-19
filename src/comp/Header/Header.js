@@ -111,24 +111,28 @@ const Header = () => {
 				ref={headerFixedRef}
 			>
 				<nav className={isFixed ? "navFixed" : "nav"} ref={navRef}>
-					{/* <div className="navOption" onClick={() => scrollPage(homeRef)}>
-						Home
-					</div> */}
+					
 					<NavOption onClick={() => scrollPage(homeRef)} >
 						Home
 					</NavOption>
-					<div className="navOption" onClick={() => scrollPage(aboutRef)}>
+			
+					<NavOption onClick={() => scrollPage(aboutRef)} >
 						About
-					</div>
-					<div className="navOption" onClick={() => scrollPage(frameworksRef)}>
-						Frameworks
-					</div>
-					<div className="navOption" onClick={() => scrollPage(myProjectsRef)}>
-						My projects
-					</div>
-					<div className="navOption" onClick={() => scrollPage(contactRef)}>
-						Contact
-					</div>
+					</NavOption>
+
+					<NavOption onClick={() => scrollPage(frameworksRef)} >
+					Frameworks
+					</NavOption>
+
+					<NavOption onClick={() => scrollPage(myProjectsRef)} >
+					My projects
+					</NavOption>
+
+					<NavOption onClick={() => scrollPage(contactRef)} >
+					 Contact
+					</NavOption>
+					
+				
 				</nav>
 			</header>
 		</>
