@@ -42,7 +42,7 @@ const MyProjects = () => {
 				<h2>Some of my projects</h2>
 				<div className="myProjects">
 					<Project
-						link={"https://boiling-bastion-80662.herokuapp.com/"}
+						link={"https://video.legga.pl/"}
 						imgLink={"https://imgur.com/Of1TP3X.png"}
 						projectName={"Watch Together"}
 						description={`Watch Together, connected with Twitch chat. Store data on MongoDB, and using Socket.io to emit events`}
