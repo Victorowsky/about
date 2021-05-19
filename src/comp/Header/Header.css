@@ -48,19 +48,26 @@
 	font-weight: 700;
 	transition: 0.2s;
 	cursor: pointer;
+	position: relative;
 }
 .navOption::after {
-	display: block;
 	content: "";
-	border-bottom: 2px solid #c04f1b;
-	border-radius: 2px;
-	transform: scaleX(0);
-	transform-origin: 0;
-	transition: 0.3s;
+	position: absolute;
+	width: 0;
+	height: 3px;
+	display: block;
+	margin-top: 2px;
+	right: -2px;
+	background: #c04f1b;
+	transition: width 0.2s ease;
+	-webkit-transition: width 0.2s ease;
 }
 .navOption:hover::after {
-	transform: scaleX(1);
+	width: 100%;
+	left: 0;
+	background: #c04f1b;
 }
 .navOption:hover {
 	color: #c04f1b;
+	transform-origin: center right;
 }

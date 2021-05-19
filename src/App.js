@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import "./App.css";
-import Header from "./comp/Header";
+import Header from "./comp/Header/Header";
 import FirstInfo from "./comp/FirstInfo";
 import SecondInfo from "./comp/SecondInfo";
 import MyProjects from "./comp/MyProjects";

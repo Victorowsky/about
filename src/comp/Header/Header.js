@@ -1,8 +1,8 @@
 import "./Header.css";
-import { DataContext } from "../App";
+import { DataContext } from "../../App";
 import { useCallback, useContext, useEffect, useRef, useState } from "react";
 import gsap from "gsap";
-
+import NavOption from "./NavOption";
 
 const Header = () => {
 	const {
@@ -111,9 +111,12 @@ const Header = () => {
 				ref={headerFixedRef}
 			>
 				<nav className={isFixed ? "navFixed" : "nav"} ref={navRef}>
-					<div className="navOption" onClick={() => scrollPage(homeRef)}>
+					{/* <div className="navOption" onClick={() => scrollPage(homeRef)}>
 						Home
-					</div>
+					</div> */}
+					<NavOption onClick={() => scrollPage(homeRef)} >
+						Home
+					</NavOption>
 					<div className="navOption" onClick={() => scrollPage(aboutRef)}>
 						About
 					</div>
